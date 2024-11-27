@@ -19,18 +19,18 @@
     <!-- Begin page -->
     <div id="layout-wrapper">
 
-    @include('partials.topbar')
+        @include('partials.topbar')
 
-@include('partials.sidebar')
+        @include('partials.sidebar')
 
-<!-- ============================================================== -->
-<!-- Start right Content here -->
-<!-- ============================================================== -->
-<div class="main-content">
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
 
-    <div class="page-content">
+            <div class="page-content">
 
-        @include('partials.page-title', ['pagetitle' => 'Morvin', 'subtitle' => 'Dashboard', 'title' => 'Dashboard'])
+                @include('partials.page-title', ['pagetitle' => 'Morvin', 'subtitle' => 'Dashboard', 'title' => 'Dashboard'])
 
                 <div class="container-fluid">
 
@@ -42,7 +42,7 @@
                                 <div class="card">
                                     <div class="card-body">
 
-                                       
+
 
                                         <h4 class="header-title mb-4 float-sm-start">Quick Summary</h4>
 
@@ -64,7 +64,7 @@
                                         </div>
 
                                         <div class="clearfix"></div>
-                                       
+
 
                                         <div class="row align-items-center">
                                             <div class="col-xl-9">
@@ -79,52 +79,52 @@
                                             <div class="col-xl-3">
                                                 <div class="dash-info-widget mt-4 mt-lg-0 py-4 px-3 rounded">
 
-                                                  
+
 
                                                     <div class="media dash-main-border pb-2 mt-2">
                                                         <div class="avatar-sm mb-3 mt-2">
                                                             <span class="avatar-title rounded-circle bg-white shadow">
-                                                                    <i class="mdi mdi-currency-inr text-primary font-size-18"></i>
-                                                                </span>
+                                                                <i class="mdi mdi-currency-inr text-primary font-size-18"></i>
+                                                            </span>
                                                         </div>
-                                                       <div class="media-body ps-3">
+                                                        <div class="media-body ps-3">
 
-                                                        <h4 class="font-size-20">$2354</h4>
-                                                        <p class="text-muted">Earning <a href="#" class="text-primary">Withdraw <i class="mdi mdi-arrow-right"></i></a>
-                                                        </p>
+                                                            <h4 class="font-size-20">$2354</h4>
+                                                            <p class="text-muted">Earning <a href="#" class="text-primary">Withdraw <i class="mdi mdi-arrow-right"></i></a>
+                                                            </p>
 
-                                                       </div>
-                                                      
+                                                        </div>
+
                                                     </div>
 
-                                                  
 
-                                                  
+
+
 
                                                     <div class="media mt-4 dash-main-border pb-2">
                                                         <div class="avatar-sm mb-3 mt-2">
                                                             <span class="avatar-title rounded-circle bg-white shadow">
-                                                                    <i class="mdi mdi-credit-card-outline text-primary font-size-18"></i>
-                                                                </span>
+                                                                <i class="mdi mdi-credit-card-outline text-primary font-size-18"></i>
+                                                            </span>
                                                         </div>
                                                         <div class="media-body ps-3">
                                                             <h4 class="font-size-20">$1598</h4>
-                                                        <p class="text-muted">To Paid <a href="#" class="text-primary">Pay <i class="mdi mdi-arrow-right"></i></a></p>
+                                                            <p class="text-muted">To Paid <a href="#" class="text-primary">Pay <i class="mdi mdi-arrow-right"></i></a></p>
                                                         </div>
                                                     </div>
 
-                                                 
+
 
                                                     <div class="media mt-4">
                                                         <div class="avatar-sm mb-2 mt-2">
                                                             <span class="avatar-title rounded-circle bg-white shadow">
-                                                                    <i class="mdi mdi-eye-outline text-primary font-size-18"></i>
-                                                                </span>
+                                                                <i class="mdi mdi-eye-outline text-primary font-size-18"></i>
+                                                            </span>
                                                         </div>
-                                                       <div class="media-body ps-3">
-                                                        <h4 class="font-size-20">1230</h4>
-                                                        <p class="text-muted mb-0">To Online <a href="#" class="text-primary">View <i class="mdi mdi-arrow-right"></i></a></p>
-                                                       </div>
+                                                        <div class="media-body ps-3">
+                                                            <h4 class="font-size-20">1230</h4>
+                                                            <p class="text-muted mb-0">To Online <a href="#" class="text-primary">View <i class="mdi mdi-arrow-right"></i></a></p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -147,23 +147,23 @@
                                                     <p class="font-size-16">Orders</p>
                                                     <div class="mini-stat-icon mx-auto mb-4 mt-3">
                                                         <span class="avatar-title rounded-circle bg-soft-primary">
-                                                                <i class="mdi mdi-cart-outline text-primary font-size-20"></i>
-                                                            </span>
+                                                            <i class="mdi mdi-cart-outline text-primary font-size-20"></i>
+                                                        </span>
                                                     </div>
                                                     <h5 class="font-size-22">58</h5>
-    
+
                                                     <p class="text-muted">70% Target</p>
 
                                                     <div class="progress mt-3" style="height: 4px;">
                                                         <div class="progress-bar progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70">
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        
+
                                     </div>
 
                                     <div class="col-xl-6 col-md-6">
@@ -173,23 +173,23 @@
                                                     <p class="font-size-16">Users</p>
                                                     <div class="mini-stat-icon mx-auto mb-4 mt-3">
                                                         <span class="avatar-title rounded-circle bg-soft-success">
-                                                                <i class="mdi mdi-account-outline text-success font-size-20"></i>
-                                                            </span>
+                                                            <i class="mdi mdi-account-outline text-success font-size-20"></i>
+                                                        </span>
                                                     </div>
                                                     <h5 class="font-size-22">136</h5>
-    
+
                                                     <p class="text-muted">80% Target</p>
 
                                                     <div class="progress mt-3" style="height: 4px;">
                                                         <div class="progress-bar progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80">
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        
+
                                     </div>
                                 </div>
 
@@ -243,30 +243,30 @@
 
                                             <li class="activity-list activity-border">
                                                 <div class="activity-icon avatar-sm">
-                                               
-                                                  <img src="assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle" alt="">
-                                                      
+
+                                                    <img src="assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle" alt="">
+
                                                 </div>
                                                 <div class="media">
                                                     <div class="me-3">
-                                                     <h5 class="font-size-15 mb-1">Your Manager Posted</h5>
-                                                     <p class="text-muted font-size-14 mb-0">James Raphael</p>
+                                                        <h5 class="font-size-15 mb-1">Your Manager Posted</h5>
+                                                        <p class="text-muted font-size-14 mb-0">James Raphael</p>
                                                     </div>
 
                                                     <div class="media-body">
                                                         <div class="text-end d-none d-md-block">
-                                                        <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 3 days</p>
+                                                            <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 3 days</p>
                                                         </div>
                                                     </div>
-                                                   
+
                                                 </div>
                                             </li>
 
                                             <li class="activity-list activity-border">
                                                 <div class="activity-icon avatar-sm">
                                                     <span class="avatar-title bg-soft-primary text-primary rounded-circle">
-                                                                <i class="ti-shopping-cart font-size-16"></i>
-                                                            </span>
+                                                        <i class="ti-shopping-cart font-size-16"></i>
+                                                    </span>
                                                 </div>
                                                 <div class="media">
                                                     <div class="me-3">
@@ -276,7 +276,7 @@
 
                                                     <div class="media-body">
                                                         <div class="text-end d-none d-md-block">
-                                                        <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 1 days</p>
+                                                            <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 1 days</p>
                                                         </div>
                                                     </div>
 
@@ -287,8 +287,8 @@
                                             <li class="activity-list activity-border">
                                                 <div class="activity-icon avatar-sm">
                                                     <span class="avatar-title bg-soft-success text-success rounded-circle">
-                                                                <i class="ti-user font-size-16"></i>
-                                                            </span>
+                                                        <i class="ti-user font-size-16"></i>
+                                                    </span>
                                                 </div>
                                                 <div class="media">
                                                     <div class="me-3">
@@ -298,7 +298,7 @@
 
                                                     <div class="media-body">
                                                         <div class="text-end d-none d-md-block">
-                                                        <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> Today</p>
+                                                            <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> Today</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -306,30 +306,30 @@
 
                                             <li class="activity-list activity-border">
                                                 <div class="activity-icon avatar-sm">
-                                               
-                                                  <img src="assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle" alt="">
-                                                      
+
+                                                    <img src="assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle" alt="">
+
                                                 </div>
                                                 <div class="media">
                                                     <div class="me-3">
-                                                     <h5 class="font-size-15 mb-1">Your Manager Posted</h5>
-                                                     <p class="text-muted font-size-14 mb-0">James Raphael</p>
+                                                        <h5 class="font-size-15 mb-1">Your Manager Posted</h5>
+                                                        <p class="text-muted font-size-14 mb-0">James Raphael</p>
                                                     </div>
 
                                                     <div class="media-body">
                                                         <div class="text-end d-none d-md-block">
-                                                        <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 3 days</p>
+                                                            <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 3 days</p>
                                                         </div>
                                                     </div>
-                                                   
+
                                                 </div>
                                             </li>
 
                                             <li class="activity-list activity-border">
                                                 <div class="activity-icon avatar-sm">
                                                     <span class="avatar-title bg-soft-primary text-primary rounded-circle">
-                                                                <i class="ti-shopping-cart font-size-16"></i>
-                                                            </span>
+                                                        <i class="ti-shopping-cart font-size-16"></i>
+                                                    </span>
                                                 </div>
                                                 <div class="media">
                                                     <div class="me-3">
@@ -339,7 +339,7 @@
 
                                                     <div class="media-body">
                                                         <div class="text-end d-none d-md-block">
-                                                        <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 1 days</p>
+                                                            <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 1 days</p>
                                                         </div>
                                                     </div>
 
@@ -349,8 +349,8 @@
                                             <li class="activity-list">
                                                 <div class="activity-icon avatar-sm">
                                                     <span class="avatar-title bg-soft-success text-success rounded-circle">
-                                                                <i class="ti-user font-size-16"></i>
-                                                            </span>
+                                                        <i class="ti-user font-size-16"></i>
+                                                    </span>
                                                 </div>
                                                 <div class="media">
                                                     <div class="me-3">
@@ -360,13 +360,13 @@
 
                                                     <div class="media-body">
                                                         <div class="text-end d-none d-md-block">
-                                                        <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> Today</p>
+                                                            <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> Today</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            
+
                                         </ul>
 
                                     </div>
@@ -380,7 +380,7 @@
                                         <h4 class="header-title mb-4">Earning Goal</h4>
 
                                         <div class="mt-2 text-center">
-                                           
+
 
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -428,7 +428,7 @@
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                              </div>
+                                            </div>
                                             <div class="carousel-inner">
 
                                                 <div class="carousel-item active">
@@ -439,43 +439,43 @@
                                                         </div>
                                                         <div class="col-md-7 offset-md-1">
 
-                                                          <div class="mt-4 mt-sm-0">
-                                                            <p class="text-muted mb-2">Headphone</p>
+                                                            <div class="mt-4 mt-sm-0">
+                                                                <p class="text-muted mb-2">Headphone</p>
 
-                                                            <h5 class="text-primary">Blue Headphone</h5>
+                                                                <h5 class="text-primary">Blue Headphone</h5>
 
 
 
-                                                            <div class="row no-gutters mt-4">
+                                                                <div class="row no-gutters mt-4">
 
-                                                                <div class="col-4">
+                                                                    <div class="col-4">
 
-                                                                    <div class="mt-1">
-                                                                        <h4>1200</h4>
-                                                                        <p class="text-muted mb-1">Sold</p>
+                                                                        <div class="mt-1">
+                                                                            <h4>1200</h4>
+                                                                            <p class="text-muted mb-1">Sold</p>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="col-4">
+
+                                                                        <div class="mt-1">
+                                                                            <h4>450</h4>
+                                                                            <p class="text-muted mb-1">Stock</p>
+                                                                        </div>
+
+
                                                                     </div>
 
-                                                                </div>
-                                                                <div class="col-4">
-
-                                                                    <div class="mt-1">
-                                                                        <h4>450</h4>
-                                                                        <p class="text-muted mb-1">Stock</p>
+                                                                    <div class="col-4">
+                                                                        <div class="mt-4 pt-1">
+                                                                            <a href="" class="btn btn-primary btn-sm">Buy
+                                                                                Now</a>
+                                                                        </div>
                                                                     </div>
 
 
                                                                 </div>
-
-                                                                <div class="col-4">
-                                                                    <div class="mt-4 pt-1">
-                                                                        <a href="" class="btn btn-primary btn-sm">Buy
-                                                                            Now</a>
-                                                                    </div>
-                                                                </div>
-
-
                                                             </div>
-                                                          </div>
 
 
                                                         </div>
@@ -490,43 +490,43 @@
                                                         </div>
                                                         <div class="col-md-7 offset-md-1">
 
-                                                           <div class="mt-4 mt-sm-0">
-                                                            <p class="text-muted mb-2">T-shirt</p>
+                                                            <div class="mt-4 mt-sm-0">
+                                                                <p class="text-muted mb-2">T-shirt</p>
 
-                                                            <h5 class="text-primary">Blue T-shirt</h5>
+                                                                <h5 class="text-primary">Blue T-shirt</h5>
 
 
 
-                                                            <div class="row no-gutters mt-4">
+                                                                <div class="row no-gutters mt-4">
 
-                                                                <div class="col-4">
+                                                                    <div class="col-4">
 
-                                                                    <div class="mt-1">
-                                                                        <h4>800</h4>
-                                                                        <p class="text-muted mb-1">Sold</p>
+                                                                        <div class="mt-1">
+                                                                            <h4>800</h4>
+                                                                            <p class="text-muted mb-1">Sold</p>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="col-4">
+
+                                                                        <div class="mt-1">
+                                                                            <h4>250</h4>
+                                                                            <p class="text-muted mb-1">Stock</p>
+                                                                        </div>
+
+
                                                                     </div>
 
-                                                                </div>
-                                                                <div class="col-4">
-
-                                                                    <div class="mt-1">
-                                                                        <h4>250</h4>
-                                                                        <p class="text-muted mb-1">Stock</p>
+                                                                    <div class="col-4">
+                                                                        <div class="mt-4 pt-1">
+                                                                            <a href="" class="btn btn-primary btn-sm">Buy
+                                                                                Now</a>
+                                                                        </div>
                                                                     </div>
 
 
                                                                 </div>
-
-                                                                <div class="col-4">
-                                                                    <div class="mt-4 pt-1">
-                                                                        <a href="" class="btn btn-primary btn-sm">Buy
-                                                                            Now</a>
-                                                                    </div>
-                                                                </div>
-
-
                                                             </div>
-                                                           </div>
 
 
                                                         </div>
@@ -543,43 +543,43 @@
                                                         </div>
                                                         <div class="col-md-7 offset-md-1">
 
-                                                           <div class="mt-4 mt-sm-0">
-                                                            <p class="text-muted mb-2">Sonic</p>
+                                                            <div class="mt-4 mt-sm-0">
+                                                                <p class="text-muted mb-2">Sonic</p>
 
-                                                            <h5 class="text-primary">Alarm clock</h5>
+                                                                <h5 class="text-primary">Alarm clock</h5>
 
 
 
-                                                            <div class="row no-gutters mt-4">
+                                                                <div class="row no-gutters mt-4">
 
-                                                                <div class="col-4">
+                                                                    <div class="col-4">
 
-                                                                    <div class="mt-1">
-                                                                        <h4>600</h4>
-                                                                        <p class="text-muted mb-1">Sold</p>
+                                                                        <div class="mt-1">
+                                                                            <h4>600</h4>
+                                                                            <p class="text-muted mb-1">Sold</p>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="col-4">
+
+                                                                        <div class="mt-1">
+                                                                            <h4>150</h4>
+                                                                            <p class="text-muted mb-1">Stock</p>
+                                                                        </div>
+
+
                                                                     </div>
 
-                                                                </div>
-                                                                <div class="col-4">
-
-                                                                    <div class="mt-1">
-                                                                        <h4>150</h4>
-                                                                        <p class="text-muted mb-1">Stock</p>
+                                                                    <div class="col-4">
+                                                                        <div class="mt-4 pt-1">
+                                                                            <a href="" class="btn btn-primary btn-sm">Buy
+                                                                                Now</a>
+                                                                        </div>
                                                                     </div>
 
 
                                                                 </div>
-
-                                                                <div class="col-4">
-                                                                    <div class="mt-4 pt-1">
-                                                                        <a href="" class="btn btn-primary btn-sm">Buy
-                                                                            Now</a>
-                                                                    </div>
-                                                                </div>
-
-
                                                             </div>
-                                                           </div>
 
 
                                                         </div>
@@ -594,10 +594,10 @@
 
                                 </div>
 
-                               
 
 
-                                
+
+
 
 
                             </div>
@@ -644,7 +644,7 @@
                             </div>
 
 
-                          
+
 
 
                         </div>
@@ -811,7 +811,7 @@
                                                         </td>
                                                     </tr>
 
-                                                   
+
 
                                                     <tr>
                                                         <td>#2125</td>
@@ -867,26 +867,26 @@
             <!-- End Page-content -->
 
             @include('partials.footer')
-</div>
-<!-- end main content-->
+        </div>
+        <!-- end main content-->
 
-</div>
-<!-- END layout-wrapper -->
+    </div>
+    <!-- END layout-wrapper -->
 
-@include('partials.right-sidebar')
+    @include('partials.right-sidebar')
 
-@include('partials.vendor-scripts')
+    @include('partials.vendor-scripts')
 
-<!-- apexcharts -->
-<script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+    <!-- apexcharts -->
+    <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-<!-- Plugins js-->
-<script src="{{ asset('assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-<script src="{{ asset('assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js') }}"></script>
+    <!-- Plugins js-->
+    <script src="{{ asset('assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js') }}"></script>
 
-<script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
 
-<script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 
 </body>
 
