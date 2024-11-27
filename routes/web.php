@@ -2,37 +2,48 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+// Include authentication routes
 require __DIR__.'/auth.php';
-// routes/web.php
 
-Route::get('/', function () {
-    return view('index');
-});
+// Authenticated routes
+Route::middleware(['auth'])->group(function () {
+    // Home (index) page - Only accessible to authenticated users
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    // Dashboard
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware('verified')->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+    // Profile management
+    Route::prefix('profile')->group(function () {
+        Route::get('/', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/', [ProfileController::class, 'update'])->name('profile.update');
+        Route::delete('/', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    });
 
+    // Role-based routes
+    Route::middleware('role:admin')->group(function () {
+        Route::get('/admin', function () {
+            return view('admin.dashboard');
+        })->name('admin.dashboard'); // Create the admin dashboard view
+    });
 
-// Admin-specific route
-Route::middleware(['auth', 'role:admin'])->group(function () {
-    Route::get('/admin', function () {
-        return view('admin.dashboard'); // Create this view
+    Route::middleware('role:employee')->group(function () {
+        Route::get('/employee', function () {
+            return view('employee.dashboard');
+        })->name('employee.dashboard'); // Create the employee dashboard view
     });
 });
 
-// Employee-specific route
-Route::middleware(['auth', 'role:employee'])->group(function () {
-    Route::get('/employee', function () {
-        return view('employee.dashboard'); // Create this view
-    });
-});
+// Redirect unauthenticated users to login
+Route::get('/login', function () {
+    return redirect()->route('login');
+})->name('login');
+
 Route::get('/layouts/hori-topbar-light', function () {
     return view('layouts.hori-topbar-light');
 })->name('layouts.hori-topbar-light');
@@ -107,6 +118,9 @@ Route::prefix('forms')->group(function () {
     Route::view('/xeditable', 'form-xeditable')->name('forms.xeditable');
 });
 
+Route::get('/logout', function () {
+    return redirect()->route('home'); // Or 'home'
+});
 
 
 
