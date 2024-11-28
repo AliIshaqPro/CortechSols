@@ -11,7 +11,7 @@ require __DIR__.'/auth.php';
 Route::middleware(['auth'])->group(function () {
     // Home (index) page - Only accessible to authenticated users
     Route::get('/', function () {
-        return view('welcome');
+        return view('index');
     })->name('home');
 
     // Dashboard
