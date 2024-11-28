@@ -41,24 +41,53 @@
                                     </div>
 
                                     <!-- Laravel Form -->
-                                    <form class="form-horizontal" action="{{ route('lockscreen.unlock') }}" method="POST">
-                                        @csrf <!-- Laravel CSRF Token -->
+                                    <form method="POST" action="{{ route('login') }}" class="form-horizontal">
+                                        @csrf
+
+                                        <!-- User Thumbnail -->
                                         <div class="user-thumb text-center mb-4 mt-4">
-                                            <img src="{{ asset('assets/images/users/avatar-7.jpg') }}" class="rounded-circle img-thumbnail avatar-md" alt="thumbnail">
+                                        <img src="{{ asset('assets/images/users/avatar-7.jpg') }}" class="rounded-circle img-thumbnail avatar-md" alt="thumbnail">
+
                                             <h5 class="font-size-15 mt-3">James Raphael</h5>
                                         </div>
 
+                                        <!-- Email Address -->
                                         <div class="mb-3">
-                                            <label for="userpassword">Password</label>
-                                            <input type="password" class="form-control" id="userpassword" name="password" placeholder="Enter password" required>
+                                            <label for="email" class="form-label">{{ __('Email') }}</label>
+                                            <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                         </div>
 
+                                        <!-- Password -->
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">{{ __('Password') }}</label>
+                                            <x-text-input id="password" class="form-control" type="password" name="password" required autocomplete="current-password" />
+                                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                        </div>
+
+                                        <!-- Remember Me -->
+                                        <div class="mb-3 form-check">
+                                            <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
+                                            <label for="remember_me" class="form-check-label text-muted">{{ __('Remember me') }}</label>
+                                        </div>
+
+                                        <!-- Forgot Password -->
+                                        <div class="mb-3 text-end">
+                                            @if (Route::has('password.request'))
+                                            <a href="{{ route('password.request') }}" class="text-muted">{{ __('Forgot your password?') }}</a>
+                                            @endif
+                                        </div>
+
+                                        <!-- Login Button -->
                                         <div class="row mb-0">
                                             <div class="col-12 text-end">
-                                                <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Unlock</button>
+                                                <x-primary-button class="btn btn-primary w-md waves-effect waves-light">
+                                                    {{ __('Log in') }}
+                                                </x-primary-button>
                                             </div>
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>

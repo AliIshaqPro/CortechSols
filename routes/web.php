@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +16,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Dashboard
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('index');
     })->middleware('verified')->name('dashboard');
 
     // Profile management
@@ -54,6 +55,9 @@ Route::prefix('auth')->group(function () {
     Route::view('/login', 'auth-login')->name('auth.login');
     Route::view('/recover-password', 'auth-recoverpw')->name('auth.recoverpw');
     Route::view('/register', 'auth-register')->name('auth.register');
+
+    // Add logout route
+    Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('auth.logout');
 });
 
 // Calendar and Chat Routes

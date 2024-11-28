@@ -1,32 +1,31 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        
-        @@include("partials/title-meta.html", {"title": "Chat"})
+<head>
+    @include("partials.title-meta", ["title" => "Chat"])
 
-        @@include("partials/head-css.html")
+    @include("partials.head-css")
+</head>
 
-    </head>
+<body>
 
-    
-    <body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
 
-        <!-- Begin page -->
-        <div id="layout-wrapper">
+        @include("partials.topbar")
 
-            @@include("partials/topbar.html")
+        @include("partials.sidebar")
 
-            @@include("partials/sidebar.html")
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
 
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
-            <div class="main-content">
+            <div class="page-content">
 
-                <div class="page-content">
+                @include("partials.page-title", ["pagetitle" => "Morvin", "subtitle" => "Dashboard", "title" => "Chat"])
 
-                    @@include("partials/page-title.html", {"pagetitle": "Morvin", "subtitle":"Dashboard" ,"title": "Chat"})
+
 
 
                     <div class="container-fluid">
@@ -710,21 +709,18 @@
                     </div> <!-- container-fluid -->
                 </div>
                 <!-- End Page-content -->
+<!-- end main content-->
+</div>
 
-              
-                
-                @@include("partials/footer.html")
-            </div>
-            <!-- end main content-->
+<!-- END layout-wrapper -->
 
-        </div>
-        <!-- END layout-wrapper -->
+@include("partials.footer")
 
-        @@include("partials/right-sidebar.html")
+@include("partials.right-sidebar")
 
-        @@include("partials/vendor-scripts.html")
+@include("partials.vendor-scripts")
 
-        <script src="assets/js/app.js"></script>
+<script src="{{ asset('assets/js/app.js') }}"></script>
 
-    </body>
+</body>
 </html>
