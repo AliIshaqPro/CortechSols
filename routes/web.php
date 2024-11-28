@@ -39,11 +39,6 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
-// Redirect unauthenticated users to login
-Route::get('/login', function () {
-    return redirect()->route('login');
-})->name('login');
-
 Route::get('/layouts/hori-topbar-light', function () {
     return view('layouts.hori-topbar-light');
 })->name('layouts.hori-topbar-light');
