@@ -1,52 +1,105 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+<!doctype html>
+<html lang="en">
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+<head>
+    {{-- Include meta and CSS files --}}
+    @include("partials.title-meta", ["title" => "Register page"])
+    @include("partials.head-css")
+</head>
+
+<body class="authentication-bg bg-primary">
+    <div class="home-center">
+        <div class="home-desc-center">
+            <div class="container">
+                <div class="home-btn">
+                    <a href="/" class="text-white router-link-active">
+                        <i class="fas fa-home h2"></i>
+                    </a>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="px-2 py-3">
+                                    <div class="text-center">
+                                        <a href="{{ url('/') }}">
+                                            <img src="{{ asset('assets/images/logo-dark.png') }}" height="22" alt="logo">
+                                        </a>
+
+                                        <h5 class="text-primary mb-2 mt-4">Free Register</h5>
+                                        <p class="text-muted">Get your free Morvin account now.</p>
+                                    </div>
+
+                                    <!-- Laravel Register Form -->
+                                    <form method="POST" action="{{ route('register') }}">
+                                        @csrf
+
+                                        <!-- Name -->
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">{{ __('Name') }}</label>
+                                            <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required autofocus>
+                                            @error('name')
+                                                <div class="mt-2 text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <!-- Email Address -->
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">{{ __('Email') }}</label>
+                                            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required>
+                                            @error('email')
+                                                <div class="mt-2 text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <!-- Password -->
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">{{ __('Password') }}</label>
+                                            <input type="password" class="form-control" id="password" name="password" required>
+                                            @error('password')
+                                                <div class="mt-2 text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <!-- Confirm Password -->
+                                        <div class="mb-3">
+                                            <label for="password_confirmation" class="form-label">{{ __('Confirm Password') }}</label>
+                                            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
+                                            @error('password_confirmation')
+                                                <div class="mt-2 text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <!-- Register Button -->
+                                        <div class="mt-4">
+                                            <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">{{ __('Register') }}</button>
+                                        </div>
+
+                                    </form>
+
+                                    <div class="mt-4 text-center">
+                                        <p class="mb-0">By registering you agree to the Morvin <a href="#" class="text-primary">Terms of Use</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 text-center text-white">
+                            <p>Already have an account ? <a href="{{ route('login') }}" class="fw-bold text-white"> Login </a></p>
+                            <p>© <script>document.write(new Date().getFullYear())</script> Morvin. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesdesign</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </div>
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+    {{-- Include vendor scripts --}}
+    @include("partials.vendor-scripts")
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+</body>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</html>

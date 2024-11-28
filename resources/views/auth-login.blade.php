@@ -6,16 +6,15 @@
     @include('partials.head-css')
 </head>
 
-
 <body class="authentication-bg bg-primary">
     <div class="home-center">
         <div class="home-desc-center">
 
             <div class="container">
 
-                <div class="home-btn"><a href="/" class="text-white router-link-active"><i
-                            class="fas fa-home h2"></i></a></div>
-
+                <div class="home-btn">
+                    <a href="/" class="text-white router-link-active"><i class="fas fa-home h2"></i></a>
+                </div>
 
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
@@ -23,59 +22,65 @@
                             <div class="card-body">
                                 <div class="px-2 py-3">
 
-
                                     <div class="text-center">
                                         <a href="index.html">
                                             <img src="assets/images/logo-dark.png" height="22" alt="logo">
                                         </a>
 
-                                        <h5 class="text-primary mb-2 mt-4">Welcome Back !</h5>
+                                        <h5 class="text-primary mb-2 mt-4">Welcome Back!</h5>
                                         <p class="text-muted">Sign in to continue to Morvin.</p>
                                     </div>
 
+                                    <x-guest-layout>
+                                        <!-- Session Status -->
+                                        <x-auth-session-status class="mb-4" :status="session('status')" />
 
-                                    <form class="form-horizontal mt-4 pt-2" action="index.html">
+                                        <form method="POST" action="{{ route('login') }}" class="form-horizontal mt-4 pt-2">
+                                            @csrf
 
-                                        <div class="mb-3">
-                                            <label for="username">Username</label>
-                                            <input type="text" class="form-control" id="username"
-                                                placeholder="Enter username">
-                                        </div>
+                                            <!-- Email Address -->
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">{{ __('Email') }}</label>
+                                                <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                            </div>
 
-                                        <div class="mb-3">
-                                            <label for="userpassword">Password</label>
-                                            <input type="password" class="form-control" id="userpassword"
-                                                placeholder="Enter password">
-                                        </div>
+                                            <!-- Password -->
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">{{ __('Password') }}</label>
+                                                <x-text-input id="password" class="form-control" type="password" name="password" required autocomplete="current-password" />
+                                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                            </div>
 
-                                        <div class="mb-3">
+                                            <!-- Remember Me -->
+                                            <div class="mb-3">
                                                 <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input"
-                                                        id="customControlInline">
-                                                    <label class="form-label"
-                                                        for="customControlInline">Remember me</label>
+                                                    <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
+                                                    <label for="remember_me" class="form-label">{{ __('Remember me') }}</label>
                                                 </div>
-                                        </div>
+                                            </div>
 
-                                        <div>
-                                            <button class="btn btn-primary w-100 waves-effect waves-light"
-                                                type="submit">Log In</button>
-                                        </div>
+                                            <div>
+                                                <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">{{ __('Log In') }}</button>
+                                            </div>
 
-                                        <div class="mt-4 text-center">
-                                            <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock me-1"></i> Forgot your password?</a>
-                                        </div>
-    
+                                            <div class="mt-4 text-center">
+                                                @if (Route::has('password.request'))
+                                                    <a href="{{ route('password.request') }}" class="text-muted">
+                                                        <i class="mdi mdi-lock me-1"></i> Forgot your password?
+                                                    </a>
+                                                @endif
+                                            </div>
+                                        </form>
 
-                                    </form>
+                                    </x-guest-layout>
 
-                                  
                                 </div>
                             </div>
                         </div>
 
                         <div class="mt-5 text-center text-white">
-                            <p>Don't have an account ?<a href="auth-register.html" class="fw-bold text-white"> Register</a> </p>
+                            <p>Don't have an account? <a href="{{ route('register') }}" class="fw-bold text-white">Register</a></p>
                             <p>© <script>document.write(new Date().getFullYear())</script> Morvin. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesdesign</p>
                         </div>
                     </div>
@@ -83,14 +88,13 @@
 
             </div>
 
-
         </div>
-        <!-- End Log In page -->
     </div>
 
-    @@include("partials/vendor-scripts.html")
+    @include("partials.vendor-scripts.html")
+    <script src="{{ asset('assets/js/app.js) }}"></script>
 
-    <script src="assets/js/app.js"></script>
+
 
 </body>
 
