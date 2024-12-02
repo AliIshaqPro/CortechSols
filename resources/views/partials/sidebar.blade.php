@@ -11,7 +11,7 @@
                     <span class="avatar-online bg-success"></span>
                 </div>
                 <div class="user-info">
-                    <h5 class="mt-3 font-size-16 text-white">James Raphael</h5>
+                    <h5 class="mt-3 font-size-16 text-white">M Shahzaib</h5>
                     <span class="font-size-13 text-white-50">Administrator</span>
                 </div>
             </div>
@@ -42,14 +42,14 @@
                 <li>
                     <a href="{{ route('chat') }}" class="waves-effect">
                         <i class="dripicons-message"></i>
-                        <span>Chat</span>
+                        <span>Active Projects</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-cart"></i>
-                        <span>Ecommerce</span>
+                        <span>Task Tracker</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('ecommerce.products') }}">Products</a></li>
@@ -66,7 +66,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-mail"></i>
-                        <span>Email</span>
+                        <span>Team Availability</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('email.inbox') }}">Inbox</a></li>
@@ -75,12 +75,12 @@
                     </ul>
                 </li>
 
-                <li class="menu-title">Components</li>
+                <li class="menu-title">Project Progress</li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-suitcase"></i>
-                        <span>UI Elements</span>
+                        <span>Client Updates</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('ui.alerts') }}">Alerts</a></li>
@@ -114,7 +114,7 @@
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="dripicons-to-do"></i>
                         <span class="badge rounded-pill bg-danger float-end">6</span>
-                        <span>Forms</span>
+                        <span>Bug Tracker</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('forms.elements') }}">Form Elements</a></li>
@@ -131,7 +131,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-graph-pie"></i>
-                        <span>Charts</span>
+                        <span>Time Logs</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('charts.apex') }}">Apex charts</a></li>
@@ -146,7 +146,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-toggles"></i>
-                        <span>Tables</span>
+                        <span>Employee Performance</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('tables.basic') }}">Basic Tables</a></li>
@@ -159,7 +159,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-basket"></i>
-                        <span>Icons</span>
+                        <span>Deadlines</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('icons.materialdesign') }}">Material Design</a></li>
@@ -172,7 +172,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-map"></i>
-                        <span>Maps</span>
+                        <span>Code Access</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="maps-google.html">Google Maps</a></li>
@@ -182,7 +182,7 @@
 
                 </li>
 
-                <li class="menu-title">Extras</li>
+                <li class="menu-title">Budget Overview</li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -220,7 +220,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-user-group"></i>
-                        <span>Authentication</span>
+                        <span>Invoices</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('auth.login') }}">Login</a></li>
@@ -234,7 +234,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-copy"></i>
-                        <span>Pages</span>
+                        <span>Team Chat</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('pages.timeline') }}">Timeline</a></li>
@@ -252,7 +252,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-checklist"></i>
-                        <span>Multi Level</span>
+                        <span>Resource Allocation</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
                         <li><a href="javascript: void(0);">Level 1.1</a></li>

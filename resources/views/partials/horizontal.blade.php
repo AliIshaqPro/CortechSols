@@ -29,30 +29,31 @@
             <div class="topbar-social-icon me-3 d-none d-md-block">
                 <ul class="list-inline title-tooltip m-0">
                     <li class="list-inline-item">
-                        <a href="{{ route('email.inbox') }}" data-toggle="tooltip" data-placement="top" title="Email">
+                        <a href="{{ route('email.inbox') }}" data-toggle="tooltip" data-placement="top" title="Client Emails">
                             <i class="mdi mdi-email-outline"></i>
                         </a>
                     </li>
 
                     <li class="list-inline-item">
-                        <a href="{{ route('chat.index') }}" data-toggle="tooltip" data-placement="top" title="Chat">
+                        <a href="{{ route('chat.index') }}" data-toggle="tooltip" data-placement="top" title="Team Chat">
                             <i class="mdi mdi-tooltip-outline"></i>
                         </a>
                     </li>
 
                     <li class="list-inline-item">
-                        <a href="{{ route('calendar.index') }}" data-toggle="tooltip" data-placement="top" title="Calendar">
+                        <a href="{{ route('calendar.index') }}" data-toggle="tooltip" data-placement="top" title="Project Calendar">
                             <i class="mdi mdi-calendar"></i>
                         </a>
                     </li>
 
                     <li class="list-inline-item">
-                        <a href="{{ route('pages.invoice') }}" data-toggle="tooltip" data-placement="top" title="Printer">
+                        <a href="{{ route('pages.invoice') }}" data-toggle="tooltip" data-placement="top" title="Project Invoices">
                             <i class="mdi mdi-printer"></i>
                         </a>
                     </li>
                 </ul>
             </div>
+
         </div>
 
 
@@ -106,6 +107,7 @@
                 </div>
             </div>
 
+
             <div class="dropdown d-none d-lg-inline-block ms-1">
                 <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
                     <i class="mdi mdi-fullscreen"></i>
@@ -142,9 +144,9 @@
                                     </span>
                                 </div>
                                 <div class="media-body">
-                                    <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                    <h6 class="mt-0 mb-1">New Software Project Order</h6>
                                     <div class="font-size-13 text-muted">
-                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                        <p class="mb-1">Your software development order has been successfully placed.</p>
                                         <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
                                     </div>
                                 </div>
@@ -157,7 +159,7 @@
                                 <div class="media-body">
                                     <h6 class="mt-0 mb-1">James Lemire</h6>
                                     <div class="font-size-13 text-muted">
-                                        <p class="mb-1">It will seem like simplified English.</p>
+                                        <p class="mb-1">Your project review request has been received.</p>
                                         <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hour ago</p>
                                     </div>
                                 </div>
@@ -171,9 +173,9 @@
                                     </span>
                                 </div>
                                 <div class="media-body">
-                                    <h6 class="mt-0 mb-1">Your item is shipped</h6>
+                                    <h6 class="mt-0 mb-1">Your Software Update is Deployed</h6>
                                     <div class="font-size-13 text-muted">
-                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                        <p class="mb-1">Your software update has been successfully deployed to the server.</p>
                                         <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
                                     </div>
                                 </div>
@@ -187,7 +189,7 @@
                                 <div class="media-body">
                                     <h6 class="mt-0 mb-1">Salena Layfield</h6>
                                     <div class="font-size-13 text-muted">
-                                        <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
+                                        <p class="mb-1">Your team collaboration project is now live.</p>
                                         <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hour ago</p>
                                     </div>
                                 </div>
@@ -201,6 +203,7 @@
                     </div>
                 </div>
             </div>
+
 
 
             <div class="dropdown d-inline-block">
@@ -264,39 +267,40 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-uielement" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="dripicons-suitcase me-2"></i> UI Elements <div class="arrow-down"></div>
+                            <i class="dripicons-suitcase me-2"></i> Software Tools <div class="arrow-down"></div>
                         </a>
 
                         <div class="dropdown-menu mega-dropdown-menu px-2 dropdown-mega-menu-xl" aria-labelledby="topnav-uielement">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <a href="{{ route('ui.alerts') }}" class="dropdown-item">Alerts</a>
-                                    <a href="{{ route('ui.buttons') }}" class="dropdown-item">Buttons</a>
-                                    <a href="{{ route('ui.cards') }}" class="dropdown-item">Cards</a>
-                                    <a href="{{ route('ui.carousel') }}" class="dropdown-item">Carousel</a>
-                                    <a href="{{ route('ui.dropdowns') }}" class="dropdown-item">Dropdowns</a>
-                                    <a href="{{ route('ui.grid') }}" class="dropdown-item">Grid</a>
-                                    <a href="{{ route('ui.images') }}" class="dropdown-item">Images</a>
+                                    <a href="{{ route('ui.alerts') }}" class="dropdown-item">Client Alerts</a>
+                                    <a href="{{ route('ui.buttons') }}" class="dropdown-item">Action Buttons</a>
+                                    <a href="{{ route('ui.cards') }}" class="dropdown-item">Project Cards</a>
+                                    <a href="{{ route('ui.carousel') }}" class="dropdown-item">Client Showcase</a>
+                                    <a href="{{ route('ui.dropdowns') }}" class="dropdown-item">Dropdown Menus</a>
+                                    <a href="{{ route('ui.grid') }}" class="dropdown-item">Grid Layout</a>
+                                    <a href="{{ route('ui.images') }}" class="dropdown-item">Project Images</a>
                                 </div>
                                 <div class="col-lg-4">
                                     <a href="{{ route('ui.lightbox') }}" class="dropdown-item">Lightbox</a>
-                                    <a href="{{ route('ui.modals') }}" class="dropdown-item">Modals</a>
-                                    <a href="{{ route('ui.rangeslider') }}" class="dropdown-item">Range Slider</a>
+                                    <a href="{{ route('ui.modals') }}" class="dropdown-item">Modals & Popups</a>
+                                    <a href="{{ route('ui.rangeslider') }}" class="dropdown-item">Range Sliders</a>
                                     <a href="{{ route('ui.session-timeout') }}" class="dropdown-item">Session Timeout</a>
                                     <a href="{{ route('ui.progressbars') }}" class="dropdown-item">Progress Bars</a>
-                                    <a href="{{ route('ui.sweet-alert') }}" class="dropdown-item">Sweet-Alert</a>
-                                    <a href="{{ route('ui.tabs-accordions') }}" class="dropdown-item">Accordions</a>
+                                    <a href="{{ route('ui.sweet-alert') }}" class="dropdown-item">Alert Popups</a>
+                                    <a href="{{ route('ui.tabs-accordions') }}" class="dropdown-item">Tabs & Accordions</a>
                                 </div>
                                 <div class="col-lg-4">
                                     <a href="{{ route('ui.typography') }}" class="dropdown-item">Typography</a>
-                                    <a href="{{ route('ui.video') }}" class="dropdown-item">Video</a>
-                                    <a href="{{ route('ui.general') }}" class="dropdown-item">General</a>
-                                    <a href="{{ route('ui.colors') }}" class="dropdown-item">Colors</a>
-                                    <a href="{{ route('ui.rating') }}" class="dropdown-item">Rating</a>
+                                    <a href="{{ route('ui.video') }}" class="dropdown-item">Video Embeds</a>
+                                    <a href="{{ route('ui.general') }}" class="dropdown-item">General UI</a>
+                                    <a href="{{ route('ui.colors') }}" class="dropdown-item">Themes & Colors</a>
+                                    <a href="{{ route('ui.rating') }}" class="dropdown-item">User Rating</a>
                                 </div>
                             </div>
                         </div>
                     </li>
+
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
