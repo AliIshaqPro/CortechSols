@@ -11,7 +11,7 @@
                     <span class="avatar-online bg-success"></span>
                 </div>
                 <div class="user-info">
-                    <h5 class="mt-3 font-size-16 text-white">M Shahzaib</h5>
+                    <h5 class="mt-3 font-size-16 text-white">Ali Ishaq</h5>
                     <span class="font-size-13 text-white-50">Administrator</span>
                 </div>
             </div>

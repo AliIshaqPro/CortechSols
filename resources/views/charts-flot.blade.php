@@ -3,9 +3,9 @@
 
     <head>
         
-        @@include("partials/title-meta.html", {"title": "Flot Charts"})
+        @include('partials.title-meta', ['title' => 'Flot Charts'])
 
-        @@include("partials/head-css.html")
+        @include('partials.head-css')
 
     </head>
 
@@ -15,9 +15,9 @@
         <!-- Begin page -->
         <div id="layout-wrapper">
 
-            @@include("partials/topbar.html")
+            @include('partials.topbar')
 
-            @@include("partials/sidebar.html")
+            @include('partials.sidebar')
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
@@ -26,8 +26,7 @@
 
                 <div class="page-content">
 
-                    @@include("partials/page-title.html", {"pagetitle": "Morvin", "subtitle":"Charts" ,"title": "Flot Charts"})
-
+                    @include('partials.page-title', ['pagetitle' => 'Morvin', 'subtitle' => 'Charts', 'title' => 'Flot Charts'])
 
                     <div class="container-fluid">
 
@@ -292,34 +291,32 @@
                 </div>
                 <!-- End Page-content -->
 
-              
-                
-                @@include("partials/footer.html")
+                @include('partials.footer')
             </div>
             <!-- end main content-->
 
         </div>
         <!-- END layout-wrapper -->
 
-        @@include("partials/right-sidebar.html")
+        @include('partials.right-sidebar')
 
-        @@include("partials/vendor-scripts.html")
+        @include('partials.vendor-scripts')
 
         <!-- flot plugins -->
-        <script src="assets/libs/flot-charts/jquery.flot.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.time.js"></script>
-        <script src="assets/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.resize.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.pie.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.selection.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.stack.js"></script>
-        <script src="assets/libs/flot-spline/js/jquery.flot.spline.min.js"></script>
-        <script src="assets/libs/flot-charts/jquery.flot.crosshair.js"></script>
+        <script src="{{ asset('assets/libs/flot-charts/jquery.flot.js') }}"></script>
+        <script src="{{ asset('assets/libs/flot-charts/jquery.flot.time.js') }}"></script>
+        <script src="{{ asset('assets/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/flot-charts/jquery.flot.resize.js') }}"></script>
+        <script src="{{ asset('assets/libs/flot-charts/jquery.flot.pie.js') }}"></script>
+        <script src="{{ asset('assets/libs/flot-charts/jquery.flot.selection.js') }}"></script>
+        <script src="{{ asset('assets/libs/flot-charts/jquery.flot.stack.js') }}"></script>
+        <script src="{{ asset('assets/libs/flot-spline/js/jquery.flot.spline.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/flot-charts/jquery.flot.crosshair.js') }}"></script>
 
         <!-- flot init -->
-        <script src="assets/js/pages/flot.init.js"></script>
+        <script src="{{ asset('assets/js/pages/flot.init.js') }}"></script>
 
-        <script src="assets/js/app.js"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
 
     </body>
 </html>

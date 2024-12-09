@@ -3,9 +3,9 @@
 
     <head>
         
-        @@include("partials/title-meta.html", {"title": "Knob Charts"})
+        @include('partials.title-meta', ['title' => 'Knob Charts'])
 
-        @@include("partials/head-css.html")
+        @include('partials.head-css')
 
     </head>
 
@@ -15,9 +15,9 @@
         <!-- Begin page -->
         <div id="layout-wrapper">
 
-            @@include("partials/topbar.html")
+            @include('partials.topbar')
 
-            @@include("partials/sidebar.html")
+            @include('partials.sidebar')
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
@@ -26,8 +26,7 @@
 
                 <div class="page-content">
 
-                    @@include("partials/page-title.html", {"pagetitle": "Morvin", "subtitle":"Charts" ,"title": "Knob Charts"})
-
+                    @include('partials.page-title', ['pagetitle' => 'Morvin', 'subtitle' => 'Charts', 'title' => 'Knob Charts'])
 
                     <div class="container-fluid">
 
@@ -166,23 +165,22 @@
                 <!-- End Page-content -->
 
               
-                
-                @@include("partials/footer.html")
+                @include('partials.footer')
             </div>
             <!-- end main content-->
 
         </div>
         <!-- END layout-wrapper -->
 
-        @@include("partials/right-sidebar.html")
+        @include('partials.right-sidebar')
 
-        @@include("partials/vendor-scripts.html")
+        @include('partials.vendor-scripts')
 
-        <script src="assets/libs/jquery-knob/jquery.knob.min.js"></script> 
+        <script src="{{ asset('assets/libs/jquery-knob/jquery.knob.min.js') }}"></script> 
 
-        <script src="assets/js/pages/jquery-knob.init.js"></script>
+        <script src="{{ asset('assets/js/pages/jquery-knob.init.js') }}"></script>
 
-        <script src="assets/js/app.js"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
 
     </body>
 </html>

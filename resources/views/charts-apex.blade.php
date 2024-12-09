@@ -2,10 +2,12 @@
 <html lang="en">
 
     <head>
-        
-        @@include("partials/title-meta.html", {"title": "Apex Charts"})
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet">
 
-        @@include("partials/head-css.html")
+        @include('partials.title-meta', ['title' => 'Apex Charts'])
+
+        @include('partials.head-css')
 
     </head>
 
@@ -15,9 +17,9 @@
         <!-- Begin page -->
         <div id="layout-wrapper">
 
-            @@include("partials/topbar.html")
+            @include('partials.topbar')
 
-            @@include("partials/sidebar.html")
+            @include('partials.sidebar')
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
@@ -26,7 +28,8 @@
 
                 <div class="page-content">
 
-                    @@include("partials/page-title.html", {"pagetitle": "Morvin", "subtitle":"Charts" ,"title": "Apex Charts"})
+                    @include('partials.page-title', ['pagetitle' => 'Morvin', 'subtitle' => 'Charts', 'title' => 'Apex Charts'])
+
 
 
                     <div class="container-fluid">
@@ -157,25 +160,23 @@
                 </div>
                 <!-- End Page-content -->
 
-              
-                
-                @@include("partials/footer.html")
+                @include('partials.footer')
             </div>
             <!-- end main content-->
 
         </div>
         <!-- END layout-wrapper -->
 
-        @@include("partials/right-sidebar.html")
+        @include('partials.right-sidebar')
 
-        @@include("partials/vendor-scripts.html")
+        @include('partials.vendor-scripts')
 
         <!-- Plugin Js-->
-        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
         <!-- demo js-->
-        <script src="assets/js/pages/apexcharts.init.js"></script>
+        <script src="{{ asset('assets/js/pages/apexcharts.init.js') }}"></script>
 
-        <script src="assets/js/app.js"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
 
     </body>
 </html>

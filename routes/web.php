@@ -6,7 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 // Include authentication routes
 require __DIR__.'/auth.php';
-
+Route::get('/', function(){
+    return "<h1>Hello</h1>";
+});
 // Authenticated routes
 Route::middleware(['auth'])->group(function () {
     // Home (index) page - Only accessible to authenticated users

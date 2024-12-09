@@ -3,9 +3,9 @@
 
 <head>
 
-    @@include("partials/title-meta.html", {"title": "Recover password"})
+    @include('partials.title-meta', ['title' => 'Recover password'])
 
-    @@include("partials/head-css.html")
+    @include('partials.head-css')
 
 </head>
 

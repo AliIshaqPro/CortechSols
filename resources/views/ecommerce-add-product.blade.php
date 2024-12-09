@@ -3,7 +3,7 @@
 
     <head>
         
-        @@include("partials/title-meta.html", {"title": "Add Product"})
+        @include("partials.title-meta", {'title' => "Add Product"})
 
           <!-- twitter-bootstrap-wizard css -->
           <link rel="stylesheet" href="assets/libs/twitter-bootstrap-wizard/prettify.css">

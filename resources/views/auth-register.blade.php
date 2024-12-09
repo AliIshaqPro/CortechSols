@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    {{-- Include meta and CSS files --}}
+   
     @include("partials.title-meta", ["title" => "Register page"])
     @include("partials.head-css")
 </head>
