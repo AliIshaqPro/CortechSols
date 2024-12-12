@@ -2,14 +2,12 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
     /**
@@ -17,14 +15,13 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    // app/Models/User.php
     protected $fillable = [
         'name',
         'email',
         'password',
-        'role', // Add this
+        'role', // Optional if roles are used
+        'profile_picture', // Added this field for the profile picture
     ];
-
 
     /**
      * The attributes that should be hidden for serialization.
@@ -37,15 +34,28 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * The attributes that should be cast.
      *
-     * @return array<string, string>
+     * @var array<string, string>
      */
-    protected function casts(): array
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+    ];
+
+    /**
+     * Define the many-to-many relationship with the Conversation model.
+     */
+    public function conversations()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->belongsToMany(Conversation::class, 'participants');
+    }
+
+    /**
+     * Define the one-to-many relationship with the Message model.
+     */
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
     }
 }

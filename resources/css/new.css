@@ -1,0 +1,40 @@
+
+  
+  /* Add the animated border using a pseudo-element */
+  .elementor-icon-box-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid rgba(116, 84, 63, 1); /* Initial border color (#74543F) */
+    box-sizing: border-box;
+    animation: borderExpand 2s infinite; /* Adjust duration if needed */
+  }
+  
+  /* Updated Keyframes */
+  @keyframes borderExpand {
+    0% {
+      transform: scale(2); /* Start at the original size */
+      border-color: rgba(116, 84, 63, 1); /* Fully colored, initial color (#74543F) */
+    }
+    25% {
+      transform: scale(3.5); /* Expand outward */
+      border-color: rgba(116, 84, 63, 0.75); /* Slightly dimmer */
+    }
+    50% {
+      transform: scale(4); /* Further expand outward */
+      border-color: rgba(116, 84, 63, 0.5); /* Dimmer */
+    }
+    75% {
+      transform: scale(4.5); /* Expand even further */
+      border-color: rgba(116, 84, 63, 0.25); /* Almost transparent */
+    }
+    100% {
+      transform: scale(5); /* Final expansion */
+      border-color: rgba(116, 84, 63, 0); /* Fully transparent */
+    }
+  }
+  

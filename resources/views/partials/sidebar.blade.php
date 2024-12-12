@@ -40,9 +40,9 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('chat') }}" class="waves-effect">
+                    <a href="{{ route('chat.index') }}" class="waves-effect">
                         <i class="dripicons-message"></i>
-                        <span>Active Projects</span>
+                        <span>Chats</span>
                     </a>
                 </li>
 
